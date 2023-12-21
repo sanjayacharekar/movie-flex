@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.ContentModal__landscape {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.ContentModal__portrait {
+  display: none;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tagline {
+  padding-bottom: 10px;
+  align-self: center;
+  font-style: italic;
+  color: #808080;
+}
+
+.ContentModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.ContentModal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ContentModal::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.ContentModal__about {
+  padding: 10px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-evenly;
+  font-weight: 300;
+}
+
+.ContentModal__title {
+  height: 12%;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.ContentModal__description {
+  display: flex;
+  height: 40%;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ButtonWatchTrailer {
+  margin-top: 10px;
+}
+
+@media (min-width: 835px) {
+  .ContentModal__landscape {
+    display: none;
+  }
+  .ContentModal__portrait {
+    display: flex;
+    width: 38%;
+    object-fit: cover;
+  }
+  .ContentModal {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  .ContentModal__about {
+    width: 58%;
+    padding: 20px;
+  }
+  .ContentModal__title {
+    font-size: 3.5vw;
+  }
+  .ContentModal__description {
+    font-size: 18px;
+  }
+  .tagline {
+    font-size: 16px;
+  }
+  .ButtonWatchTrailer {
+    font-size: 14px;
+  }
+}
